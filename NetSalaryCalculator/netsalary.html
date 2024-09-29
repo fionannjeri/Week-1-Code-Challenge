@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Net Salary Calculator</title>
+</head>
+<script>
+    function calculateNetSalary(basicSalary, benefits) {
+    
+    const grossSalary = basicSalary + benefits;
+
+    
+    let paye = 0;
+    if (grossSalary > 50000) {
+        paye = (grossSalary - 50000) * 0.30 + 5000; 
+    } else if (grossSalary > 44334) {
+        paye = (grossSalary - 44334) * 0.25 + 4000;
+    } else if (grossSalary > 40000) {
+        paye = (grossSalary - 40000) * 0.20 + 3000;
+    } else if (grossSalary > 32334) {
+        paye = (grossSalary - 32334) * 0.15 + 2000;
+    } else if (grossSalary > 24000) {
+        paye = (grossSalary - 24000) * 0.10;
+    }
+
+    
+    let nhif = 0;
+    if (grossSalary <= 6999) {
+        nhif = 150;
+    } else if (grossSalary <= 11999) {
+        nhif = 300;
+    } else if (grossSalary <= 14999) {
+        nhif = 400;
+    } else if (grossSalary <= 19999) {
+        nhif = 500;
+    } else if (grossSalary <= 24999) {
+        nhif = 600;
+    } else if (grossSalary <= 29999) {
+        nhif = 750;
+    } else if (grossSalary <= 34999) {
+        nhif = 850;
+    } else if (grossSalary <= 39999) {
+        nhif = 900;
+    } else {
+        nhif = 1000;
+    }
+
+    
+    const nssf = 200; 
+
+    
+    const totalDeductions = paye + nhif + nssf;
+    const netSalary = grossSalary - totalDeductions;
+
+    
+    console.log(`Gross Salary: ${grossSalary}`);
+    console.log(`PAYE: ${paye}`);
+    console.log(`NHIF: ${nhif}`);
+    console.log(`NSSF: ${nssf}`);
+    console.log(`Total Deductions: ${totalDeductions}`);
+    console.log(`Net Salary: ${netSalary}`);
+}
+
+
+const basicSalaryInput = prompt("Enter Basic Salary:");
+const benefitsInput = prompt("Enter Benefits:");
+
+const basicSalary = parseFloat(basicSalaryInput);
+const benefits = parseFloat(benefitsInput);
+
+calculateNetSalary(basicSalary, benefits);
+
+    
+</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed Detector</title>
+</head>
+<script>
+    function checkSpeed(speed) {
+    const speedLimit = 70;
+    
+    // Check if speed is below the limit
+    if (speed < speedLimit) {
+        console.log("Ok");
+    } else {
+        // Calculate the number of demerit points
+        const excessSpeed = speed - speedLimit;
+        const demeritPoints = Math.floor(excessSpeed / 5);
+        
+        console.log(`Points: ${demeritPoints}`);
+        
+        // Check if points exceed 12
+        if (demeritPoints > 12) {
+            console.log("License suspended");
+        }
+    }
+}
+
+// Example usage: Change the speed value to test
+const speedInput = prompt("Enter the speed of the car:");
+const speed = Number(speedInput);
+checkSpeed(speed);
+
+    
+</script>
+</html>
