@@ -1,3 +1,10 @@
+# (Week One Code Challenge)
+
+#### Date, 29/09/2024
+
+#### By Gakonoh Fiona Njeri
+
+## Description
 Challenge 1: Student Grade Generator (Toy Problem)
 Write a program that prompts the user to input student marks. The input should be between 0 and 100. Then output the correct grade: 
 
@@ -14,3 +21,32 @@ For example, if the speed is 80, it should print: “Points: 2”. If the driver
 
 Challenge 3: Net Salary Calculator (Toy Problem)
 Write a program whose major task is to calculate an individual’s Net Salary by getting the inputs of basic salary and benefits. Calculate the payee (i.e. Tax), NHIFDeductions, NSSFDeductions, gross salary, and net salary. 
+
+## Installation
+You use git clone to be able to download the documents in the GitHub
+
+## Installation Requirements
+Git
+
+### Installation instruction
+```
+Git clone git@github.com:fionannjeri/Week-1-Code-Challenge.git
+
+
+```
+
+# Live Link
+
+
+## Technologies used
+HTML
+CSS
+Github
+Javascript
+
+## Support and contact details
+github.com/fionannjeri
+
+### License
+All rights reserved.
+
